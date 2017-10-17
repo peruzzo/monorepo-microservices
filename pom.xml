@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.leftxmas</groupId>
+	<artifactId>monorepo-microservices</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>pom</packaging>
+
+	<name>parent-pom</name>
+	<description>Demo project for Spring Boot</description>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<java.version>1.8</java.version>
+
+		<partial.referenceBranch>HEAD~2</partial.referenceBranch>
+		<partial.baseBranch>HEAD</partial.baseBranch>
+		<partial.uncommited>true</partial.uncommited>
+		<partial.untracked>false</partial.untracked>
+		<partial.buildAll>false</partial.buildAll>
+		<partial.outputFile>changed.projects</partial.outputFile>
+		<partial.writeChanged>false</partial.writeChanged>
+	</properties>
+
+	<modules>
+		<module>global-lib</module>
+		<module>service-1-lib</module>
+		<module>service-2-lib</module>
+		<module>service-1</module>
+		<module>service-2</module>
+	</modules>
+
+	<build>
+		<plugins>
+
+			<plugin>
+		      <groupId>com.lesfurets</groupId>
+		      <artifactId>partial-build-plugin</artifactId>
+		      <version>version</version>
+		       <executions>
+		        <execution>
+		          <id>changed</id>
+		          <goals>
+		            <goal>writeChanged</goal>
+		          </goals>
+		          <configuration>
+		           <outputFile>${project.build.directory}/changed.projects</outputFile>
+		          </configuration>
+		        </execution>
+		       </executions>
+		    </plugin>
+		</plugins>
+	</build>
+
+</project>
