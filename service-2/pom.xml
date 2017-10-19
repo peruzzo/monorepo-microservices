@@ -56,14 +56,6 @@
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
 		</plugins>
-
-		<extensions>
-	        <extension>
-	            <groupId>com.vackosar.gitflowincrementalbuilder</groupId>
-	            <artifactId>gitflow-incremental-builder</artifactId>
-	            <version>3.4</version>
-	        </extension>
-	    </extensions>
 	</build>
 
 

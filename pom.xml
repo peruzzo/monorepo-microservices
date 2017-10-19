@@ -33,26 +33,4 @@
 		<module>service-2</module>
 	</modules>
 
-	<build>
-		<plugins>
-
-			<plugin>
-		      <groupId>com.lesfurets</groupId>
-		      <artifactId>partial-build-plugin</artifactId>
-		      <version>version</version>
-		       <executions>
-		        <execution>
-		          <id>changed</id>
-		          <goals>
-		            <goal>writeChanged</goal>
-		          </goals>
-		          <configuration>
-		           <outputFile>${project.build.directory}/changed.projects</outputFile>
-		          </configuration>
-		        </execution>
-		       </executions>
-		    </plugin>
-		</plugins>
-	</build>
-
 </project>
