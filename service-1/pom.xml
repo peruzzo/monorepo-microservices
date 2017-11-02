@@ -54,7 +54,7 @@
 				<artifactId>multi-module-maven-release-plugin</artifactId>
 				<configuration>
 					<releaseGoals>
-						<releaseGoal>install</releaseGoal>
+						<releaseGoal>deploy</releaseGoal>
 					</releaseGoals>
 					<serverId>github</serverId>
 				</configuration>
