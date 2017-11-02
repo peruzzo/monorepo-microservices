@@ -62,6 +62,7 @@
 					<releaseGoals>
 						<releaseGoal>deploy</releaseGoal>
 					</releaseGoals>
+					<serverId>github</serverId>
 				</configuration>
 			</plugin>
 		</plugins>
